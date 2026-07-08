@@ -61,6 +61,6 @@ app.delete('/api/anecdotes/:id', async (req, res) => {
 
 app.use(express.static('dist'))
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`server started on port ${PORT}`)
 })

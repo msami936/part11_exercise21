@@ -16,7 +16,7 @@ module.exports = [
   },
   js.configs.recommended,
   {
-    files: ['app.js', 'playwright.config.js', 'e2e-tests/**/*.js'],
+    files: ['app.js', 'playwright.config.js', 'e2e-tests/**/*.js', 'scripts/**/*.js'],
     languageOptions: {
       ecmaVersion: 2018,
       sourceType: 'commonjs',

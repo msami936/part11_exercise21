@@ -8,11 +8,13 @@ describe('Anecdotes', () => {
   })
 
   test('one can create a new anecdote', async ({ page }) => {
+    const anecdoteText = `e2e anecdote ${Date.now()}`
+
     await page.goto('')
-    await page.locator('form input[name="anecdote"]').fill('playwright anecdote')
+    await page.locator('form input[name="anecdote"]').fill(anecdoteText)
     await page.getByRole('button', { name: 'create' }).click()
-    await expect(page.getByText('playwright anecdote', { exact: true })).toBeVisible()
-    await expect(page.getByText('a new anecdote \'playwright anecdote\' added')).toBeVisible()
+    await expect(page.getByText(anecdoteText, { exact: true })).toBeVisible()
+    await expect(page.getByText(`a new anecdote '${anecdoteText}' added`)).toBeVisible()
   })
 
   test('one can vote for an anecdote', async ({ page }) => {

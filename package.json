@@ -7,7 +7,7 @@
     "start": "concurrently \"npm run start:server\" \"npm run start:client\"",
     "start:server": "node app.js",
     "start:client": "vite --config client/vite.config.js",
-    "start:test": "npm run build && node app.js",
+    "start:test": "npm run build && node scripts/start-test.js",
     "start-prod": "node app.js",
     "build": "vite build --config client/vite.config.js",
     "test": "vitest run --config client/vite.config.js",
