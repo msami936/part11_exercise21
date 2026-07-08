@@ -1,7 +1,7 @@
 import { create } from 'zustand'
 import { useNotificationStore } from './notificationStore'
 
-const baseUrl = 'http://localhost:3001/anecdotes'
+const baseUrl = '/api/anecdotes'
 
 const useAnecdoteStore = create((set, get) => ({
   anecdotes: [],

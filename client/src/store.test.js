@@ -18,7 +18,7 @@ describe('anecdote store', () => {
 
     await useAnecdoteStore.getState().actions.initializeAnecdotes()
 
-    expect(fetch).toHaveBeenCalledWith('http://localhost:3001/anecdotes')
+    expect(fetch).toHaveBeenCalledWith('/api/anecdotes')
     expect(useAnecdoteStore.getState().anecdotes).toEqual(anecdotes)
   })
 })
